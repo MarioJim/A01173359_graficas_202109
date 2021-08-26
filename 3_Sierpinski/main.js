@@ -23,11 +23,25 @@ const trianglePoints = [
 
 const triangle = new SierpinskiTriangle(context, trianglePoints);
 
+let sliderValue = 0;
+let onlyLines = true;
+
+const renderCanvas = () => {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  triangle.render(sliderValue, onlyLines);
+};
+
 const slider = document.getElementById('slider');
 slider.addEventListener('input', (e) => {
   const label = document.getElementById('sliderLabel');
   label.textContent = `Subdivisiones: ${e.target.value}`;
 
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  triangle.render(e.target.value);
+  sliderValue = e.target.value;
+  renderCanvas();
+});
+
+const checkbox = document.getElementById('onlyLines');
+checkbox.addEventListener('input', (e) => {
+  onlyLines = e.target.checked;
+  renderCanvas();
 });
