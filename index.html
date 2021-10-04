@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gráficas computacionales</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        display: flex;
+        width: 100vw;
+      }
+
+      .nav-item-title {
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #project-window {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 340px;
+        right: 0;
+        width: calc(100vw - 340px);
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="overflow-y: hidden">
+      <div
+        class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white"
+        style="width: 340px"
+      >
+        <div class="p-3 link-dark text-decoration-none border-bottom">
+          <span class="fs-5 fw-bold">Gráficas computacionales</span>
+          <br />
+          <span>Mario Jiménez A01173359</span>
+        </div>
+        <nav class="list-group list-group-flush border-bottom scrollarea">
+          <a
+            href="#1_hello2dworld"
+            class="list-group-item list-group-item-action py-3 lh-tight"
+          >
+            <div class="d-flex w-100 nav-item-title">
+              <strong class="mb-1">Hello World 2D</strong>
+            </div>
+            <div class="col-10 mb-1 small">Canvas with 2D context</div>
+          </a>
+          <a
+            href="#2_pong"
+            class="list-group-item list-group-item-action py-3 lh-tight"
+          >
+            <div class="d-flex w-100 nav-item-title">
+              <strong class="mb-1">Pong</strong>
+            </div>
+            <div class="col-10 mb-1 small">Canvas with 2D context</div>
+          </a>
+          <a
+            href="#3_Sierpinski"
+            class="list-group-item list-group-item-action py-3 lh-tight"
+          >
+            <div class="d-flex w-100 nav-item-title">
+              <strong class="mb-1">Sierpinski</strong>
+            </div>
+            <div class="col-10 mb-1 small">Canvas with 2D context</div>
+          </a>
+          <a
+            href="#4_Figuras2Den3D"
+            class="list-group-item list-group-item-action py-3 lh-tight"
+          >
+            <div class="d-flex w-100 nav-item-title">
+              <strong class="mb-1">Figuras 2D en 3D</strong>
+            </div>
+            <div class="col-10 mb-1 small">Canvas with 3D context</div>
+          </a>
+          <a
+            href="#5_Figuras3D"
+            class="list-group-item list-group-item-action py-3 lh-tight"
+          >
+            <div class="d-flex w-100 nav-item-title">
+              <strong class="mb-1">Figuras 3D</strong>
+            </div>
+            <div class="col-10 mb-1 small">Canvas with 3D context</div>
+          </a>
+          <a
+            href="#6_Examen1"
+            class="list-group-item list-group-item-action py-3 lh-tight"
+          >
+            <div class="d-flex w-100 nav-item-title">
+              <strong class="mb-1">Examen 1</strong>
+            </div>
+            <div class="col-10 mb-1 small">Canvas with 3D context</div>
+          </a>
+          <a
+            href="#7_RobotArm"
+            class="list-group-item list-group-item-action py-3 lh-tight"
+          >
+            <div class="d-flex w-100 nav-item-title">
+              <strong class="mb-1">Robot Arm</strong>
+            </div>
+            <div class="col-10 mb-1 small">three.js, dat.gui</div>
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div style="width: calc(100vw - 340px); height: 100vh">
+      <iframe id="project-window"></iframe>
+    </div>
+    <script>
+      const navItems = Array.from(
+        document.getElementsByTagName('nav')[0].children,
+      );
+      const iframeWindow = document.getElementById('project-window');
+      if (window.location.hash === '') {
+        window.location.href = navItems[navItems.length - 1].href;
+      }
+
+      const setActive = () => {
+        navItems.forEach((it) => {
+          it.classList.remove('active');
+          it.ariaCurrent = false;
+        });
+        const navIdx = parseInt(window.location.hash[1]) - 1;
+        navItems[navIdx].classList.add('active');
+        navItems[navIdx].ariaCurrent = true;
+        iframeWindow.src = `./${window.location.hash.substr(1)}/index.html`;
+      };
+
+      setActive();
+      window.addEventListener('hashchange', () => setActive());
+    </script>
+  </body>
+</html>
