@@ -1,0 +1,285 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 343,
+      "max": [
+        0.6875309944152832,
+        0.702816367149353,
+        0.6976321339607239
+      ],
+      "min": [
+        -0.7165411710739136,
+        -0.7496948838233948,
+        -0.6721529364585876
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 4116,
+      "componentType": 5126,
+      "count": 343,
+      "max": [
+        0.9900810718536377,
+        0.9962387681007385,
+        0.9839964509010315
+      ],
+      "min": [
+        -0.9996538162231445,
+        -0.9941322207450867,
+        -0.9936538934707642
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 343,
+      "max": [
+        0.991289496421814,
+        0.9180475473403931,
+        0.889116644859314,
+        1.0
+      ],
+      "min": [
+        -0.9928223490715027,
+        -0.5865994095802307,
+        -0.9701337814331055,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 343,
+      "max": [
+        0.9488499760627747,
+        0.9495468139648438
+      ],
+      "min": [
+        0.051150038838386536,
+        0.04014596343040466
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1890,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "DaimonWarlord (https://sketchfab.com/DaimonWarlord)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/asteroid-model-4d432097a836408f9ef0d8d19413b976",
+      "title": "Asteroid Model"
+    },
+    "generator": "Sketchfab-11.64.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 7560,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2744,
+      "byteOffset": 7560,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 8232,
+      "byteOffset": 10304,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5488,
+      "byteOffset": 18536,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 24024,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Asteroid_Mat_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Asteroid_Mat_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Asteroid_Mat",
+      "normalTexture": {
+        "index": 1
+      },
+      "occlusionTexture": {
+        "index": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.012962172196035427,
+          0.02683168741843291,
+          0.025077994588245927,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 0
+        },
+        "roughnessFactor": 0.73133082830199
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Asteroid_LP_Asteroid_Mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        2.9139761924743652,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.470326924189174e-16,
+        -2.9139761924743652,
+        0.0,
+        0.0,
+        2.9139761924743652,
+        6.470326924189174e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "fdda6d7cfb6d4ec6b3b13506ea47a76f.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.999999999999981,
+        -1.9470718370939613e-07,
+        0.0,
+        0.0,
+        1.9470718370939613e-07,
+        0.999999999999981,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Asteroid_LP"
+    },
+    {
+      "mesh": 0,
+      "name": "Asteroid_LP_Asteroid_Mat_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
